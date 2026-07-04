@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anubhav Singh — Full Stack Developer portfolio showcasing modern web apps, mobile applications, and AI projects. Available for hire." />
+  <meta name="keywords" content="Full Stack Developer, Web Developer, React, Node.js, Portfolio, Software Engineer, Anubhav Singh" />
+  <meta property="og:title" content="Anubhav Singh | Full Stack Developer" />
+  <meta property="og:description" content="Crafting digital experiences with modern tech. Full Stack Developer specializing in React, Node.js, and AI." />
+  <meta property="og:type" content="website" />
+  <title>Anubhav Singh | Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PARTICLE CANVAS BACKGROUND
+  ═══════════════════════════════════════════════════════════════════ -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about"    class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#skills"   class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+        <li><a href="#contact"  class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta" id="nav-hire-btn">Hire Me</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="#about"      class="mobile-nav-link" id="mob-about">About</a></li>
+      <li><a href="#projects"   class="mobile-nav-link" id="mob-projects">Projects</a></li>
+      <li><a href="#skills"     class="mobile-nav-link" id="mob-skills">Skills</a></li>
+      <li><a href="#experience" class="mobile-nav-link" id="mob-experience">Experience</a></li>
+      <li><a href="#contact"    class="mobile-nav-link" id="mob-contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="home" class="hero" aria-label="Hero">
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        <span>Available for Hire</span>
+      </div>
+      <h1 class="hero-title reveal-up">
+        Hi, I'm <span class="gradient-text" id="hero-name">Anubhav Singh</span>
+      </h1>
+      <div class="hero-subtitle reveal-up">
+        <span class="static-text">I build </span>
+        <span class="typewriter-wrapper">
+          <span id="typewriter" class="typewriter-text"></span>
+          <span class="cursor">|</span>
+        </span>
+      </div>
+      <p class="hero-description reveal-up">
+        Full Stack Developer passionate about crafting high-performance web applications,
+        scalable APIs, and immersive digital experiences. Turning ideas into reality, one
+        commit at a time.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#projects" class="btn btn-primary" id="hero-view-work">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          View My Work
+        </a>
+        <a href="#contact" class="btn btn-secondary" id="hero-contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get In Touch
+        </a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="3">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="30">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="15">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal-right">
+      <div class="hero-image-wrapper">
+        <div class="hero-glow"></div>
+        <div class="hero-orbit orbit-1"><div class="orbit-icon" title="React">⚛️</div></div>
+        <div class="hero-orbit orbit-2"><div class="orbit-icon" title="Node.js">🟢</div></div>
+        <div class="hero-orbit orbit-3"><div class="orbit-icon" title="Database">🗄️</div></div>
+        <img src="images/profile.png" alt="Alex Johnson - Full Stack Developer" class="hero-profile-img" id="hero-profile-img" loading="eager" />
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="about" class="section about-section" aria-label="About me">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">About Me</span>
+        <h2 class="section-title reveal-up">The Story So Far</h2>
+        <p class="section-subtitle reveal-up">Passionate about building things that matter</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-content reveal-left">
+          <div class="glass-card about-card">
+            <p class="about-text">
+              Hey there! I'm Anubhav, a <strong>Full Stack Developer</strong> based in Greater Noida with
+              a love for clean code and creative problem-solving. I specialize in building scalable web
+              applications from the ground up — from pixel-perfect frontends to robust backend systems.
+            </p>
+            <p class="about-text">
+              When I'm not pushing commits, you'll find me exploring the latest in AI/ML, contributing
+              to open-source projects, or discovering new tech in the Delhi NCR community. I believe great
+              software is a blend of technical excellence and thoughtful design.
+            </p>
+            <div class="about-details">
+              <div class="detail-item">
+                <span class="detail-icon">📍</span>
+                <span>Greater Noida, Delhi Area</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">🎓</span>
+                <span>B.S. Computer Science — UC Berkeley</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">💼</span>
+                <span>Open to full-time & freelance work</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">🌐</span>
+                <span>English, Spanish (conversational)</span>
+              </div>
+            </div>
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary" id="about-hire-btn">Hire Me</a>
+              <a href="resume.pdf" class="btn btn-ghost" id="about-resume-btn" target="_blank" download>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download CV
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills reveal-right">
+          <div class="glass-card skills-card">
+            <h3 class="skills-heading">Core Competencies</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Frontend Development</span>
+                  <span class="skill-pct">92%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="92" style="--bar-color: #7c3aed;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Backend / APIs</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="88" style="--bar-color: #06b6d4;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Databases</span>
+                  <span class="skill-pct">82%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="82" style="--bar-color: #f59e0b;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>DevOps / Cloud</span>
+                  <span class="skill-pct">75%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="75" style="--bar-color: #10b981;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>AI / Machine Learning</span>
+                  <span class="skill-pct">68%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="68" style="--bar-color: #ec4899;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="projects" class="section projects-section" aria-label="Projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">My Work</span>
+        <h2 class="section-title reveal-up">Featured Projects</h2>
+        <p class="section-subtitle reveal-up">A selection of projects I've crafted with passion</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal-up" role="tablist" aria-label="Project filters">
+        <button class="filter-btn active" data-filter="all" id="filter-all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="web"    id="filter-web"    role="tab" aria-selected="false">Web</button>
+        <button class="filter-btn" data-filter="mobile" id="filter-mobile" role="tab" aria-selected="false">Mobile</button>
+        <button class="filter-btn" data-filter="ai"     id="filter-ai"     role="tab" aria-selected="false">AI / ML</button>
+        <button class="filter-btn" data-filter="cli"    id="filter-cli"    role="tab" aria-selected="false">CLI / Tools</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid" aria-live="polite" aria-label="Projects list">
+        <!-- Populated dynamically via JavaScript / API -->
+        <div class="projects-loading" id="projects-loading">
+          <div class="loading-spinner"></div>
+          <p>Loading projects…</p>
+        </div>
+      </div>
+
+      <div class="projects-error hidden" id="projects-error">
+        <span class="error-icon">⚠️</span>
+        <p id="projects-error-msg">Failed to load projects. Please try again.</p>
+        <button class="btn btn-ghost" id="retry-projects-btn" onclick="window.portfolio.loadProjects()">Retry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="skills" class="section skills-section" aria-label="Technical skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Tech Stack</span>
+        <h2 class="section-title reveal-up">Tools & Technologies</h2>
+        <p class="section-subtitle reveal-up">The technologies I work with every day</p>
+      </div>
+      <div class="skills-categories">
+        <div class="skill-category reveal-up">
+          <h3 class="category-title">
+            <span class="category-icon">🖥️</span> Frontend
+          </h3>
+          <div class="tech-grid">
+            <div class="tech-pill" id="tech-react"><span class="tech-emoji">⚛️</span>React</div>
+            <div class="tech-pill" id="tech-nextjs"><span class="tech-emoji">▲</span>Next.js</div>
+            <div class="tech-pill" id="tech-vue"><span class="tech-emoji">💚</span>Vue.js</div>
+            <div class="tech-pill" id="tech-ts"><span class="tech-emoji">🔷</span>TypeScript</div>
+            <div class="tech-pill" id="tech-html"><span class="tech-emoji">🌐</span>HTML5</div>
+            <div class="tech-pill" id="tech-css"><span class="tech-emoji">🎨</span>CSS3</div>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <h3 class="category-title">
+            <span class="category-icon">⚙️</span> Backend
+          </h3>
+          <div class="tech-grid">
+            <div class="tech-pill" id="tech-node"><span class="tech-emoji">🟢</span>Node.js</div>
+            <div class="tech-pill" id="tech-express"><span class="tech-emoji">🚀</span>Express</div>
+            <div class="tech-pill" id="tech-python"><span class="tech-emoji">🐍</span>Python</div>
+            <div class="tech-pill" id="tech-django"><span class="tech-emoji">🎸</span>Django</div>
+            <div class="tech-pill" id="tech-graphql"><span class="tech-emoji">🔴</span>GraphQL</div>
+            <div class="tech-pill" id="tech-rest"><span class="tech-emoji">🔗</span>REST APIs</div>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <h3 class="category-title">
+            <span class="category-icon">🗄️</span> Databases
+          </h3>
+          <div class="tech-grid">
+            <div class="tech-pill" id="tech-pg"><span class="tech-emoji">🐘</span>PostgreSQL</div>
+            <div class="tech-pill" id="tech-mongo"><span class="tech-emoji">🍃</span>MongoDB</div>
+            <div class="tech-pill" id="tech-mysql"><span class="tech-emoji">🐬</span>MySQL</div>
+            <div class="tech-pill" id="tech-redis"><span class="tech-emoji">🔴</span>Redis</div>
+            <div class="tech-pill" id="tech-sqlite"><span class="tech-emoji">💎</span>SQLite</div>
+            <div class="tech-pill" id="tech-prisma"><span class="tech-emoji">⬡</span>Prisma</div>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <h3 class="category-title">
+            <span class="category-icon">☁️</span> DevOps & Cloud
+          </h3>
+          <div class="tech-grid">
+            <div class="tech-pill" id="tech-docker"><span class="tech-emoji">🐳</span>Docker</div>
+            <div class="tech-pill" id="tech-aws"><span class="tech-emoji">☁️</span>AWS</div>
+            <div class="tech-pill" id="tech-vercel"><span class="tech-emoji">▲</span>Vercel</div>
+            <div class="tech-pill" id="tech-git"><span class="tech-emoji">🔀</span>Git</div>
+            <div class="tech-pill" id="tech-cicd"><span class="tech-emoji">🔄</span>CI/CD</div>
+            <div class="tech-pill" id="tech-nginx"><span class="tech-emoji">🌿</span>Nginx</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       EXPERIENCE SECTION
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="experience" class="section experience-section" aria-label="Work experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Career</span>
+        <h2 class="section-title reveal-up">Work Experience</h2>
+        <p class="section-subtitle reveal-up">My professional journey so far</p>
+      </div>
+      <div class="timeline" id="experience-timeline">
+        <div class="timeline-item reveal-left" id="exp-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Senior Full Stack Developer</h3>
+                <p class="timeline-company">TechFlow Solutions</p>
+              </div>
+              <span class="timeline-period">2023 – Present</span>
+            </div>
+            <ul class="timeline-achievements">
+              <li>Led development of a microservices-based e-commerce platform serving 500K+ monthly users</li>
+              <li>Reduced API response times by 65% through Redis caching and query optimization</li>
+              <li>Mentored a team of 4 junior developers and led bi-weekly code review sessions</li>
+              <li>Architected real-time order tracking system using WebSockets and event-driven design</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">AWS</span><span class="tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right" id="exp-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Full Stack Developer</h3>
+                <p class="timeline-company">InnovateLab Inc.</p>
+              </div>
+              <span class="timeline-period">2022 – 2023</span>
+            </div>
+            <ul class="timeline-achievements">
+              <li>Built and shipped 3 SaaS products from concept to production within tight deadlines</li>
+              <li>Integrated third-party APIs (Stripe, Twilio, SendGrid) for payments and communications</li>
+              <li>Implemented automated testing achieving 85% code coverage across all services</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Vue.js</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left" id="exp-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Junior Web Developer</h3>
+                <p class="timeline-company">CreativeDigital Agency</p>
+              </div>
+              <span class="timeline-period">2021 – 2022</span>
+            </div>
+            <ul class="timeline-achievements">
+              <li>Developed responsive websites for 20+ clients across retail, healthcare, and finance sectors</li>
+              <li>Collaborated with UX/UI designers to translate wireframes into pixel-perfect interfaces</li>
+              <li>Maintained and optimized legacy PHP applications improving performance by 40%</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">WordPress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section" aria-label="Contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title reveal-up">Let's Work Together</h2>
+        <p class="section-subtitle reveal-up">Have a project in mind? Let's build something great.</p>
+      </div>
+      <div class="contact-grid">
+        <!-- Info Cards -->
+        <div class="contact-info reveal-left">
+          <div class="glass-card contact-card">
+            <div class="contact-item" id="contact-email-item">
+              <div class="contact-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Email</p>
+                <a href="mailto:anubhavsingh5153@gmail.com" class="contact-value" id="contact-email-link">anubhavsingh5153@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item" id="contact-location-item">
+              <div class="contact-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Location</p>
+                <p class="contact-value">Greater Noida, Delhi Area</p>
+              </div>
+            </div>
+            <div class="contact-item" id="contact-availability-item">
+              <div class="contact-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Availability</p>
+                <p class="contact-value">Mon – Fri, 10am – 7pm IST</p>
+              </div>
+            </div>
+            <div class="social-links" id="social-links">
+              <a href="https://github.com/anubhavsingh5153" class="social-btn" id="social-github" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/anubhav-singh" class="social-btn" id="social-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://twitter.com/anubhavsingh5153" class="social-btn" id="social-twitter" target="_blank" rel="noopener" aria-label="Twitter / X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://dev.to/anubhavsingh" class="social-btn" id="social-devto" target="_blank" rel="noopener" aria-label="Dev.to">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.29zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal-right">
+          <div class="glass-card form-card">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name" />
+                <span class="form-error" id="name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-email-input" class="form-label">Email Address</label>
+                <input type="email" id="contact-email-input" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" />
+                <span class="form-error" id="email-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject <span class="optional">(optional)</span></label>
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Project inquiry…" />
+              </div>
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="Tell me about your project…" rows="5" required></textarea>
+                <span class="form-error" id="message-error"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="contact-submit-btn">
+                <span id="submit-btn-text">Send Message</span>
+                <span id="submit-btn-loading" class="hidden">
+                  <svg class="spin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                  Sending…
+                </span>
+              </button>
+              <div class="form-success hidden" id="form-success">
+                <span>✅</span>
+                <p>Message sent! I'll get back to you within 24 hours.</p>
+              </div>
+              <div class="form-fail hidden" id="form-fail">
+                <span>❌</span>
+                <p id="form-fail-msg">Something went wrong. Please try again.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════════════ -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#home" class="footer-logo" id="footer-logo">
+          <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-text">
+          Designed & built with ❤️ by Anubhav Singh
+        </p>
+        <p class="footer-copyright">© <span id="footer-year"></span> All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── Back to Top ──────────────────────────────────────────────────── -->
+  <button class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Main script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
