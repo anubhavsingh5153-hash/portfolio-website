@@ -19,8 +19,10 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve frontend static files
-app.use(express.static(path.join(__dirname, '../frontend')));
+// Serve frontend static files safely
+app.use('/css', express.static(path.join(__dirname, '../css')));
+app.use('/js', express.static(path.join(__dirname, '../js')));
+app.use('/images', express.static(path.join(__dirname, '../images')));
 
 // ─── Routes ──────────────────────────────────────────────────────────────────
 app.use('/api/projects', projectsRouter);
@@ -32,7 +34,7 @@ app.get('/api/health', (req, res) => {
 
 // Catch-all: serve frontend SPA
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+  res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 // ─── Error Handler ────────────────────────────────────────────────────────────

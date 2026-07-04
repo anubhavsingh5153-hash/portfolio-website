@@ -178,10 +178,9 @@ function initTypewriter() {
 
   const phrases = [
     'stunning web apps.',
-    'scalable APIs.',
-    'beautiful UIs.',
-    'AI-powered tools.',
-    'things that matter.',
+    'responsive websites.',
+    'clean & robust APIs.',
+    'solutions that matter.',
   ];
 
   let phraseIdx = 0;
@@ -422,40 +421,34 @@ function createProjectCard(project, index) {
 function getFallbackProjects() {
   return [
     {
-      id: 1, title: 'AI Chat Application',
-      description: 'A real-time AI-powered chat application with NLP, multi-room support, and intelligent auto-responses.',
-      tech_stack: ['React', 'Node.js', 'Socket.io', 'TensorFlow'],
-      github_url: '#', live_url: '#', category: 'ai', featured: true
+      id: 1,
+      title: 'BloodCare Management System',
+      description: 'A comprehensive web application for managing blood donations, tracking blood inventory in real-time, and coordinating between blood banks, donors, and hospitals.',
+      tech_stack: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript'],
+      github_url: 'https://github.com/anubhavsingh5153',
+      live_url: null,
+      category: 'web',
+      featured: true
     },
     {
-      id: 2, title: 'E-Commerce Platform',
-      description: 'Full-featured e-commerce platform with Stripe payments, admin dashboard, and real-time analytics.',
-      tech_stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
-      github_url: '#', live_url: '#', category: 'web', featured: true
+      id: 2,
+      title: 'AURA E-commerce Website',
+      description: 'A modern, fully responsive e-commerce web platform featuring product catalog display, user cart management, secure checkout flow, and custom animations.',
+      tech_stack: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express', 'MongoDB'],
+      github_url: 'https://github.com/anubhavsingh5153',
+      live_url: null,
+      category: 'web',
+      featured: true
     },
     {
-      id: 3, title: 'Task Management Dashboard',
-      description: 'Kanban-style project management tool with drag-and-drop boards and team collaboration features.',
-      tech_stack: ['Vue.js', 'Express', 'MySQL', 'Redis'],
-      github_url: '#', live_url: '#', category: 'web', featured: true
-    },
-    {
-      id: 4, title: 'Fitness Tracker App',
-      description: 'Cross-platform mobile app for tracking workouts, nutrition, and fitness goals with GPS route tracking.',
-      tech_stack: ['React Native', 'Firebase', 'Node.js'],
-      github_url: '#', live_url: null, category: 'mobile', featured: false
-    },
-    {
-      id: 5, title: 'Crypto Portfolio Tracker',
-      description: 'Real-time cryptocurrency portfolio tracker with live price feeds and P&L analysis.',
-      tech_stack: ['React', 'D3.js', 'WebSockets', 'PostgreSQL'],
-      github_url: '#', live_url: '#', category: 'web', featured: false
-    },
-    {
-      id: 6, title: 'Weather Forecast CLI',
-      description: 'Developer-friendly CLI weather tool with colorized output, 7-day forecasts, and configurable alerts.',
-      tech_stack: ['Python', 'Click', 'OpenWeather API'],
-      github_url: '#', live_url: null, category: 'cli', featured: false
+      id: 3,
+      title: 'Personal Portfolio Website',
+      description: 'A premium, interactive developer portfolio website featuring dark glassmorphism design, custom particle animations, a real-time contact form API, and dynamic database loading.',
+      tech_stack: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express', 'JSON DB'],
+      github_url: 'https://github.com/anubhavsingh5153',
+      live_url: 'http://localhost:5000',
+      category: 'web',
+      featured: true
     }
   ];
 }

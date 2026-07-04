@@ -129,64 +129,34 @@ function initializeDatabase() {
 function seedProjects() {
   const projects = [
     {
-      title: 'AI Chat Application',
-      description: 'A real-time AI-powered chat application with natural language processing capabilities. Features multi-room support, message history, and intelligent auto-responses powered by a custom NLP model.',
-      tech_stack: ['React', 'Node.js', 'Socket.io', 'Python', 'TensorFlow', 'MongoDB'],
-      github_url: 'https://github.com/alexjohnson/ai-chat-app',
-      live_url: 'https://ai-chat.demo.com',
-      image_url: null,
-      category: 'ai',
-      featured: true
-    },
-    {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform with product management, shopping cart, secure payments via Stripe, order tracking, and an admin dashboard with real-time analytics.',
-      tech_stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Tailwind', 'Prisma'],
-      github_url: 'https://github.com/alexjohnson/ecommerce-platform',
-      live_url: 'https://shop.demo.com',
-      image_url: null,
-      category: 'web',
-      featured: true
-    },
-    {
-      title: 'Task Management Dashboard',
-      description: 'A Kanban-style project management tool with drag-and-drop boards, team collaboration, deadline reminders, and progress analytics. Supports unlimited workspaces and custom workflows.',
-      tech_stack: ['Vue.js', 'Express', 'MySQL', 'Redis', 'Docker', 'WebSockets'],
-      github_url: 'https://github.com/alexjohnson/task-dashboard',
-      live_url: 'https://tasks.demo.com',
-      image_url: null,
-      category: 'web',
-      featured: true
-    },
-    {
-      title: 'Fitness Tracker App',
-      description: 'A cross-platform mobile app for tracking workouts, nutrition, and fitness goals. Features GPS route tracking for outdoor activities, custom workout plans, and visual progress charts.',
-      tech_stack: ['React Native', 'Expo', 'Firebase', 'Node.js', 'Chart.js'],
-      github_url: 'https://github.com/alexjohnson/fitness-tracker',
+      title: 'BloodCare Management System',
+      description: 'A comprehensive web application for managing blood donations, tracking blood inventory in real-time, and coordinating between blood banks, donors, and hospitals.',
+      tech_stack: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript'],
+      github_url: 'https://github.com/anubhavsingh5153',
       live_url: null,
       image_url: null,
-      category: 'mobile',
-      featured: false
-    },
-    {
-      title: 'Crypto Portfolio Tracker',
-      description: 'Real-time cryptocurrency portfolio tracker with live price feeds, P&L analysis, tax reporting tools, and customizable price alerts via email/SMS.',
-      tech_stack: ['React', 'D3.js', 'Node.js', 'WebSockets', 'CoinGecko API', 'PostgreSQL'],
-      github_url: 'https://github.com/alexjohnson/crypto-tracker',
-      live_url: 'https://crypto.demo.com',
-      image_url: null,
       category: 'web',
-      featured: false
+      featured: true
     },
     {
-      title: 'Weather Forecast CLI',
-      description: 'A developer-friendly command-line weather application with colorized output, 7-day forecasts, hourly breakdowns, and configurable alerts. Supports multiple cities and unit systems.',
-      tech_stack: ['Python', 'Click', 'OpenWeather API', 'Rich', 'Poetry'],
-      github_url: 'https://github.com/alexjohnson/weather-cli',
+      title: 'AURA E-commerce Website',
+      description: 'A modern, fully responsive e-commerce web platform featuring product catalog display, user cart management, secure checkout flow, and custom animations.',
+      tech_stack: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express', 'MongoDB'],
+      github_url: 'https://github.com/anubhavsingh5153',
       live_url: null,
       image_url: null,
-      category: 'cli',
-      featured: false
+      category: 'web',
+      featured: true
+    },
+    {
+      title: 'Personal Portfolio Website',
+      description: 'A premium, interactive developer portfolio website featuring dark glassmorphism design, custom particle animations, a real-time contact form API, and dynamic database loading.',
+      tech_stack: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express', 'JSON DB'],
+      github_url: 'https://github.com/anubhavsingh5153',
+      live_url: 'http://localhost:5000',
+      image_url: null,
+      category: 'web',
+      featured: true
     }
   ];
 
